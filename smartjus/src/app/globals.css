@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+:root {
+  --background: #010409;
+  --foreground: #f8fafc;
+  --surface: rgba(7, 16, 28, 0.78);
+  --muted: #0f172a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-muted: var(--muted);
+  --color-primary: #4a78ff;
+  --color-primary-strong: #224bff;
+  --color-accent: #38f8c6;
+  --color-accent-strong: #11d99c;
+  --color-border: rgba(255, 255, 255, 0.08);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --shadow-card: 0 18px 48px rgba(14, 21, 40, 0.55);
+  --radius-card: 28px;
+}
+
+body {
+  min-height: 100vh;
+  background:
+      radial-gradient(
+        120% 120% at 50% 0%,
+        rgba(74, 120, 255, 0.28),
+        rgba(4, 10, 24, 0.1)
+      ),
+    linear-gradient(160deg, #020b19 0%, #020617 38%, #040919 72%, #010409 100%);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.18) transparent;
+}
+
+::selection {
+  background: rgba(56, 248, 198, 0.35);
+  color: #0b1120;
+}
